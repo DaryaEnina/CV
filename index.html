@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="assets/img/D_logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <nav class="header__nav">
+          <ul class="header_list">
+            <li class="header_items">
+              <a href="#home" class="header_link active">Home</a>
+            </li>
+            <li class="header_items">
+              <a href="#about" class="header_link">About Me</a>
+            </li>
+            <li class="header_items">
+              <a href="#skills" class="header_link">Skills</a>
+            </li>
+            <li class="header_items">
+              <a href="#portfolio" class="header_link">Portfolio</a>
+            </li>
+            <li class="header_items">
+              <a href="#code" class="header_link">Code example</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu">
+          <input id="check_menu" type="checkbox" />
+          <label class="menu__btn" for="check_menu"></label>
+          <div class="burger_line first"></div>
+          <div class="burger_line second"></div>
+          <div class="burger_line third"></div>
+          <div class="burger_line fourth"></div>
+          <ul class="main_menu">
+            <li class="burger-menu_item">
+              <a href="#home" class="header_link">Home</a>
+            </li>
+            <li class="burger-menu_item">
+              <a href="#about" class="header_link">About Me</a>
+            </li>
+            <li class="burger-menu_item">
+              <a href="#skills" class="header_link">Skills</a>
+            </li>
+            <li class="burger-menu_item">
+              <a href="#portfolio" class="header_link">Portfolio</a>
+            </li>
+            <li class="burger-menu_item">
+              <a href="#contacts" class="header_link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main_switch">
+          <label>
+            <input class="main_checkbox" type="checkbox" />
+          </label>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="main" id="home">
+        <div class="main_wrapper">
+          <div class="main_main">
+            <div class="main_info">
+              <figure class="main_photo">
+                <img
+                  class="main_photo-img"
+                  src="assets/img/avatar.jpg"
+                  alt="photo"
+                />
+              </figure>
+              <h1 class="main_name">Darya Enina</h1>
+              <p class="main_about">Front-end web developder</p>
+            </div>
+            <div class="contacts_wrapper">
+              <div class="contacts_title">
+                <h3>Contacts</h3>
+              </div>
+              <div class="contacts_text">
+                <p>
+                  Want to know more or just chat? <br />
+                  You are welcome!
+                </p>
+              </div>
+              <ul class="contacts_icons">
+                <li class="contacts_icon">
+                  <div class="contacts_image discord"></div>
+                  <div>
+                    <a
+                      class="contacts_link"
+                      href="https://discord.com/users/801478094758084628"
+                      target="_blank"
+                      >Discord: DaryaEnina#8910
+                    </a>
+                  </div>
+                </li>
+                <li class="contacts_icon">
+                  <div class="contacts_image telegram"></div>
+                  <div>
+                    <a
+                      class="contacts_link"
+                      href="https://t.me/DaryaRaud"
+                      target="_blank"
+                      >Telegram: @DaryaRaud
+                    </a>
+                  </div>
+                </li>
+                <li class="contacts_icon">
+                  <div class="contacts_image github"></div>
+                  <div>
+                    <a
+                      class="contacts_link"
+                      href="https://github.com/DaryaEnina"
+                      target="_blank"
+                      >GitHub: DaryaEnina
+                    </a>
+                  </div>
+                </li>
+                <li class="contacts_icon">
+                  <div class="contacts_image phone"></div>
+                  <div>
+                    <a
+                      class="contacts_link"
+                      href="tel: +375333317819 "
+                      target="_blank"
+                      >Phone: +375(33)331-78-19
+                    </a>
+                  </div>
+                </li>
+                <li class="contacts_icon">
+                  <div class="contacts_image home"></div>
+                  <div>
+                    <a
+                      class="contacts_link"
+                      href="#"
+                      style="cursor: context-menu"
+                      >Belarus, Maladzechna (ready to relocate)
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="about_wrapper">
+          <div class="about_title">
+            <h2>About me</h2>
+          </div>
+          <div class="about_text">
+            <p>
+              Hi, I'm Darya – junior frond-end developer. I'm interested in IT
+              and everything connected with it.
+            </p>
+            <p>
+              I'm studying at courses "Frond-end development" in RSSchool since
+              summer 2021 and like it very much.
+            </p>
+            <p>
+              I have good interpersonal skills, am an excellent team worker and
+              very willing to learn and develop new skills. So I'm eady to
+              implement excellent projects with wonderful people.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <div class="skills_wrapper">
+          <div class="skills_title">
+            <h3>Skills</h3>
+          </div>
+          <div class="skills_icons">
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/html.png" alt="html" />
+              </div>
+              <div class="skills_icon_title">
+                <p>HTML</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/css.png" alt="css" />
+              </div>
+              <div class="skills_icon_title">
+                <p>CSS/SASS/SCSS</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/js.png" alt="JavaScript" />
+              </div>
+              <div class="skills_icon_title">
+                <p>JavaScript</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/webpack.svg" alt="tilda" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Webpack</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/npm.svg" alt="wordpress" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Npm</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/git.svg" alt="wordpress" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Git</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/typescript.svg" alt="bubble" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Typescript</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/react.svg" alt="bubble" />
+              </div>
+              <div class="skills_icon_title">
+                <p>React</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/english.jpg" alt="bubble" />
+              </div>
+              <div class="skills_icon_title">
+                <p>English level</p>
+                <p>A2+</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio" id="portfolio">
+        <div class="portfolio_wrapper">
+          <div class="portfolio_title">
+            <h2>Portfolio</h2>
+          </div>
+          <div class="portfolio_img">
+            <a
+              href="https://daryaenina.github.io/RS-Lang/index"
+              target="_blank"
+            >
+              <img src="assets/img/rslang.png" alt="portfolio" />
+            </a>
+            <a href="https://github.com/DaryaEnina/RS-Lang" target="_blank"
+              >RS-Lang - web app for learning english words
+            </a>
+          </div>
+          <div class="portfolio_img">
+            <a href="https://daryaenina.github.io/museum/" target="_blank">
+              <img src="assets/img/museum.png" alt="portfolio" />
+            </a>
+            <a
+              href="https://github.com/DaryaEnina/museum/tree/gh-pages"
+              target="_blank"
+              >Museum - LandingPage
+            </a>
+          </div>
+          <div class="portfolio_img">
+            <a
+              href="https://daryaenina.github.io/virtual-piano/index"
+              target="_blank"
+            >
+              <img src="assets/img/portfolio3.png" alt="portfolio" />
+            </a>
+            <a
+              href="https://github.com/DaryaEnina/virtual-piano/tree/gh-pages"
+              target="_blank"
+              >Virtual piano - JavaScript Application</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="code" id="code">
+        <div class="code_example">
+          <h2>Code Example</h2>
+          <pre><code class="language-javascript"> 
+            function countCats(matrix) {
+              let count = 0;
+              let array = ['^^'];
+              for (let i = 0; i < matrix.length; i++) {
+                for (let j = 0; j < matrix[i].length; j++) {
+                  if (array[0] === matrix[i][j]) count++;
+                }
+              }
+              return count;
+            };
+        </code></pre>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_wrapper">
+        <div class="line">
+          <h4>Created by Darya Enina</h4>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap");
+
+@import "./assets/reset.css";
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  --main-bg: #f2f2f2;
+  --white-bg: #ffffff;
+  --border-bottom: 1px solid black;
+  --text: #000000;
+  --border-img: #dbdbdb;
+  --fill: #000000;
+}
+
+:root[data-theme="dark"] {
+  --main-bg: #dbdbdb;
+  --white-bg: #2c2c2c;
+  --border-bottom: 1px solid #ffffff;
+  --text: #ffffff;
+  --border-img: #ffffff;
+  --fill: #ffffff;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Castoro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text);
+  overflow: auto;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Header styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+header {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--main-bg);
+  position: sticky;
+  top: 0;
+}
+.header_wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  border-bottom: var(--border-bottom);
+  padding-bottom: 20px;
+}
+.header_list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.header_items {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.header_link {
+  text-decoration: none;
+  color: #000000;
+}
+.header_link.active {
+  font-weight: 700;
+  border-bottom: 1px solid black;
+}
+/*Меню Бургер*/
+
+.burger-menu {
+  margin-bottom: 42px;
+  margin-right: -10px;
+  width: 40px;
+  background-color: transparent;
+  color: #333333;
+  text-align: center;
+  height: 25px;
+  display: none;
+}
+
+#check_menu {
+  opacity: 0; /*display:none*/
+}
+.menu__btn {
+  display: block;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 40px;
+}
+.burger_line {
+  position: relative;
+  top: 9px;
+  left: 25%;
+  width: 35px;
+  height: 2px;
+  background-color: #333333;
+  transition: 0.5s all;
+}
+
+.first {
+  width: 35px;
+  border: 2px solid #333333;
+}
+.second,
+.third {
+  top: 18px;
+  width: 35px;
+  border: 1px solid #333333;
+}
+.fourth {
+  top: 28px;
+  width: 35px;
+  border: 2px solid #333333;
+}
+.main_menu {
+  display: block;
+  position: absolute;
+  width: 180px;
+  top: -74.5%;
+  left: -5%;
+  transform: translateY(100%);
+  max-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--white-bg);
+}
+.burger-menu_item {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: var(--border-bottom);
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text);
+}
+.burger-menu_item a {
+  text-decoration: none;
+  color: var(--burger-menu-text);
+}
+#check_menu:checked ~ .main_menu {
+  max-height: 500px;
+  font-size: 16px;
+}
+#check_menu:checked ~ .first {
+  display: none;
+}
+#check_menu:checked ~ .second {
+  transform: rotate(45deg);
+}
+#check_menu:checked ~ .third {
+  transform: rotate(-45deg);
+}
+#check_menu:checked ~ .fourth {
+  display: none;
+}
+.main_switch {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+.main_checkbox {
+  display: flex;
+  vertical-align: middle;
+  justify-content: flex-start;
+  width: 54px;
+  height: 30px;
+  -webkit-appearance: none;
+  outline: none;
+  background: #f2f2f2;
+  border-radius: 25px;
+  transition: 0.5s;
+  box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+}
+.main_checkbox:checked {
+  background: #333333;
+}
+.main_checkbox:before {
+  content: "";
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: 6px;
+  top: 5px;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main_checkbox:checked:before {
+  left: 30px;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Header styles end*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Main styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white-bg);
+}
+.main_wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.main_main {
+  display: flex;
+  justify-content: space-between;
+}
+.main_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--main-bg);
+  border-top-left-radius: 85px;
+  border-top-right-radius: 85px;
+}
+.main_name {
+  font-family: "Castoro";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 80px;
+}
+
+.main_about {
+  font-family: "Castoro";
+  font-style: italic;
+  font-size: 30px;
+}
+
+.main_photo {
+  max-width: 940px;
+  height: 340px;
+  margin: 0;
+}
+.main_photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 15px solid var(--border-img);
+}
+.contacts_wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts_title {
+  text-align: center;
+}
+.contacts_text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer_button {
+  margin: 0 auto;
+}
+.contacts_button {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #333333;
+  font-size: 18px;
+  color: #f7f7f7;
+  margin-bottom: 30px;
+}
+.contacts_icons {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  flex-direction: column;
+}
+.contacts_icon {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.contacts_image {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.discord {
+  background-image: url(./assets/img/discord.png);
+  background-size: cover;
+}
+.telegram {
+  background-image: url(./assets/img/telegram.svg);
+  background-size: cover;
+}
+.github {
+  background-image: url(./assets/img/github-icon.svg);
+  background-size: cover;
+}
+.phone {
+  background-image: url(./assets/img/phone.svg);
+  background-size: cover;
+}
+.home {
+  background-image: url(./assets/img/Home.svg);
+  background-size: cover;
+}
+.contacts_link {
+  text-decoration: none;
+  color: var(--text);
+}
+.contacts_link:hover {
+  color: blueviolet;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Main styles end*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* About styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.about {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--main-bg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+h2 {
+  font-family: "Castoro";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  color: #000000;
+}
+.about_text {
+  text-align: center;
+  color: #000000;
+  font-family: "Castoro";
+  font-size: 25px;
+}
+.about_text p {
+  margin: 10px 0;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* About styles end*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Skils styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.skills {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white-bg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.skills_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 940px;
+}
+.skills_title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: "Castoro";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  color: var(--text);
+}
+.skills_icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skills_icon {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0px 20px;
+  row-gap: 10px;
+}
+
+.skills_icon_img img {
+  width: 80px;
+  height: 90px;
+}
+.skills_icon_title {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.skills_icon_stars {
+  display: inline;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Skills styles end*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Portfolio styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.portfolio {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--main-bg);
+}
+.portfolio_wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+.portfolio_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.portfolio_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.portfolio_img img {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.portfolio_img a {
+  color: black;
+}
+.youtube {
+  width: 100px;
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Portfolio styles end*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Footer styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+}
+.code {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white-bg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.code_example {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.code_example h2 {
+  text-align: center;
+}
+
+footer {
+  background-color: var(--main-bg);
+  padding-bottom: 50px;
+}
+.footer_wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.line {
+  max-width: 940px;
+  border-top: var(--border-bottom);
+  margin: 0 auto;
+}
+h4 {
+  font-family: "Castoro";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 60px;
+  color: var(--text);
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 720px) and (min-width: 300px) {
+  .header__nav {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+@media (max-width: 660px) and (min-width: 300px) {
+  .main_main {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills_icons {
+    flex-direction: column;
+  }
+}
