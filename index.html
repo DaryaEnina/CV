@@ -18,7 +18,7 @@
     </script>
   </head>
   <body>
-    <header id="home">
+    <header>
       <div class="header_wrapper">
         <nav class="header__nav">
           <ul class="header_list">
@@ -35,15 +35,11 @@
               <a href="#portfolio" class="header_link">Portfolio</a>
             </li>
             <li class="header_items">
-              <a href="#contacts" class="header_link">Contacts</a>
+              <a href="#code" class="header_link">Code example</a>
             </li>
           </ul>
         </nav>
-        <div class="main_switch">
-          <label>
-            <input class="main_checkbox" type="checkbox" />
-          </label>
-        </div>
+
         <div class="burger-menu">
           <input id="check_menu" type="checkbox" />
           <label class="menu__btn" for="check_menu"></label>
@@ -69,10 +65,15 @@
             </li>
           </ul>
         </div>
+        <div class="main_switch">
+          <label>
+            <input class="main_checkbox" type="checkbox" />
+          </label>
+        </div>
       </div>
     </header>
     <main>
-      <section class="main">
+      <section class="main" id="home">
         <div class="main_wrapper">
           <div class="main_main">
             <div class="main_info">
@@ -137,7 +138,7 @@
                       class="contacts_link"
                       href="tel: +375333317819 "
                       target="_blank"
-                      >Phone: +375333317819
+                      >Phone: +375(33)331-78-19
                     </a>
                   </div>
                 </li>
@@ -148,7 +149,7 @@
                       class="contacts_link"
                       href="#"
                       style="cursor: context-menu"
-                      >Belarus, Maladzechna
+                      >Belarus, Maladzechna (ready to relocate)
                     </a>
                   </div>
                 </li>
@@ -164,14 +165,18 @@
           </div>
           <div class="about_text">
             <p>
-              Hi, I'm Darya – frond-end developer from Minsk. I'm interested in
-              IT and everything connected with it.
+              Hi, I'm Darya – junior frond-end developer. I'm interested in IT
+              and everything connected with it.
             </p>
             <p>
-              I'm studying at courses "Frond-end development" in EPAM and
-              RSSchool.
+              I'm studying at courses "Frond-end development" in RSSchool since
+              summer 2021 and like it very much.
             </p>
-            <p>Ready to implement excellent projects with wonderful people.</p>
+            <p>
+              I have good interpersonal skills, am an excellent team worker and
+              very willing to learn and develop new skills. So I'm eady to
+              implement excellent projects with wonderful people.
+            </p>
           </div>
         </div>
       </section>
@@ -179,21 +184,6 @@
         <div class="skills_wrapper">
           <div class="skills_title">
             <h3>Skills</h3>
-          </div>
-          <div class="skills_text">
-            <p>I work in such programs as:</p>
-            <div class="skills_text_menu-container">
-              <ul class="skills_text_menu">
-                <li class="skills_text_menu_item">HTML</li>
-                <li class="skills_text_menu_item">CSS</li>
-                <li class="skills_text_menu_item">JavaScript</li>
-              </ul>
-              <ul class="skills_text_menu">
-                <li class="skills_text_menu_item">Tilda</li>
-                <li class="skills_text_menu_item">WordPress</li>
-                <li class="skills_text_menu_item">Bubble</li>
-              </ul>
-            </div>
           </div>
           <div class="skills_icons">
             <div class="skills_icon">
@@ -216,7 +206,7 @@
                 <img src="assets/img/css.png" alt="css" />
               </div>
               <div class="skills_icon_title">
-                <p>CSS</p>
+                <p>CSS/SASS/SCSS</p>
               </div>
               <div class="skills_icon_stars">
                 <img src="assets/img/Star2.png" alt="star" />
@@ -237,16 +227,61 @@
                 <img src="assets/img/Star2.png" alt="star" />
                 <img src="assets/img/Star2.png" alt="star" />
                 <img src="assets/img/Star2.png" alt="star" />
-                <img src="assets/img/Star.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
                 <img src="assets/img/Star.png" alt="star" />
               </div>
             </div>
             <div class="skills_icon">
               <div class="skills_icon_img">
-                <img src="assets/img/tilda.png" alt="tilda" />
+                <img src="assets/img/webpack.svg" alt="tilda" />
               </div>
               <div class="skills_icon_title">
-                <p>Tilda</p>
+                <p>Webpack</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/npm.svg" alt="wordpress" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Npm</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/git.svg" alt="wordpress" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Git</p>
+              </div>
+              <div class="skills_icon_stars">
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star2.png" alt="star" />
+                <img src="assets/img/Star.png" alt="star" />
+              </div>
+            </div>
+            <div class="skills_icon">
+              <div class="skills_icon_img">
+                <img src="assets/img/typescript.svg" alt="bubble" />
+              </div>
+              <div class="skills_icon_title">
+                <p>Typescript</p>
               </div>
               <div class="skills_icon_stars">
                 <img src="assets/img/Star2.png" alt="star" />
@@ -258,10 +293,10 @@
             </div>
             <div class="skills_icon">
               <div class="skills_icon_img">
-                <img src="assets/img/social_wordpress_55.png" alt="wordpress" />
+                <img src="assets/img/react.svg" alt="bubble" />
               </div>
               <div class="skills_icon_title">
-                <p>WordPress</p>
+                <p>React</p>
               </div>
               <div class="skills_icon_stars">
                 <img src="assets/img/Star2.png" alt="star" />
@@ -273,10 +308,11 @@
             </div>
             <div class="skills_icon">
               <div class="skills_icon_img">
-                <img src="assets/img/bubble.png" alt="bubble" />
+                <img src="assets/img/english.jpg" alt="bubble" />
               </div>
               <div class="skills_icon_title">
-                <p>Bubble</p>
+                <p>English level</p>
+                <p>A2+</p>
               </div>
               <div class="skills_icon_stars">
                 <img src="assets/img/Star2.png" alt="star" />
@@ -287,7 +323,6 @@
               </div>
             </div>
           </div>
-          <p>English level: A2+</p>
         </div>
       </section>
       <section class="portfolio" id="portfolio">
@@ -297,16 +332,14 @@
           </div>
           <div class="portfolio_img">
             <a
-              href="https://daryaenina.github.io/online-zoo/online-zoo/pages/lending/"
+              href="https://daryaenina.github.io/RS-Lang/index"
               target="_blank"
             >
-              <img src="assets/img/portfolio1.png" alt="portfolio" />
+              <img src="assets/img/rslang.png" alt="portfolio" />
             </a>
-            <a
-              href="https://github.com/DaryaEnina/online-zoo/tree/gh-pages"
-              target="_blank"
-              >Online zoo - My first website</a
-            >
+            <a href="https://github.com/DaryaEnina/RS-Lang" target="_blank"
+              >RS-Lang - web app for learning english words
+            </a>
           </div>
           <div class="portfolio_img">
             <a href="https://daryaenina.github.io/museum/" target="_blank">
@@ -337,17 +370,16 @@
         <div class="code_example">
           <h2>Code Example</h2>
           <pre><code class="language-javascript"> 
-          document.querySelector('.fullscreen').addEventListener('click', toggleScreen);
-          function toggleScreen() {
-            if (document.fullscreenElement === null) {
-              document.documentElement.requestFullscreen();
-            }
-            else {
-              if (document.fullscreenEnabled){
-                document.exitFullscreen();
+            function countCats(matrix) {
+              let count = 0;
+              let array = ['^^'];
+              for (let i = 0; i < matrix.length; i++) {
+                for (let j = 0; j < matrix[i].length; j++) {
+                  if (array[0] === matrix[i][j]) count++;
+                }
               }
-            }
-          };
+              return count;
+            };
         </code></pre>
         </div>
       </section>
@@ -356,12 +388,6 @@
       <div class="footer_wrapper">
         <div class="line">
           <h4>Created by Darya Enina</h4>
-        </div>
-        <div class="RS">
-          <a href="https://rs.school/js/" target="_blank">
-            <img src="assets/img/rs_school_js.svg" alt="RS" />
-            <span class="rss-year">'21</span>
-          </a>
         </div>
       </div>
     </footer>

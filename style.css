@@ -16,14 +16,14 @@ html {
   --white-bg: #ffffff;
   --border-bottom: 1px solid black;
   --text: #000000;
-  --border-img: #f2f2f2;
+  --border-img: #dbdbdb;
   --fill: #000000;
 }
 
 :root[data-theme="dark"] {
   --main-bg: #dbdbdb;
   --white-bg: #2c2c2c;
-  --border-bottom: 2px solid #ffffff;
+  --border-bottom: 1px solid #ffffff;
   --text: #ffffff;
   --border-img: #ffffff;
   --fill: #ffffff;
@@ -131,13 +131,14 @@ header {
   display: block;
   position: absolute;
   width: 180px;
-  top: -15.5%;
+  top: -74.5%;
   left: -5%;
   transform: translateY(100%);
   max-height: 0;
   font-size: 0;
   overflow: hidden;
   z-index: 1;
+  background-color: var(--white-bg);
 }
 .burger-menu_item {
   display: block;
@@ -168,23 +169,6 @@ header {
 }
 #check_menu:checked ~ .fourth {
   display: none;
-}
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/* Header styles end*/
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/* Main styles start*/
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-.main {
-  width: 100%;
-  margin: 0 auto;
-  background-color: var(--white-bg);
-  padding-bottom: 50px;
-}
-.main_wrapper {
-  max-width: 940px;
-  margin: 0 auto;
 }
 .main_switch {
   display: flex;
@@ -224,6 +208,23 @@ header {
 .main_checkbox:checked:before {
   left: 30px;
 }
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Header styles end*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Main styles start*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white-bg);
+}
+.main_wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
 .main_main {
   display: flex;
   justify-content: space-between;
@@ -234,6 +235,9 @@ header {
   align-items: center;
   text-align: center;
   padding: 30px;
+  background-color: var(--main-bg);
+  border-top-left-radius: 85px;
+  border-top-right-radius: 85px;
 }
 .main_name {
   font-family: "Castoro";
@@ -362,11 +366,12 @@ h2 {
 }
 .about_text {
   text-align: center;
-  margin-bottom: 100px;
   color: #000000;
+  font-family: "Castoro";
+  font-size: 25px;
 }
 .about_text p {
-  margin: 0 auto;
+  margin: 10px 0;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -391,34 +396,28 @@ h2 {
   max-width: 940px;
 }
 .skills_title {
-  margin: 0 auto;
-}
-.skills_text {
-  margin: 0 auto;
-  margin-bottom: 45px;
-}
-.skills_text_menu-container {
-  display: flex;
-}
-h3 {
+  text-align: center;
+  margin-bottom: 25px;
   font-family: "Castoro";
   font-style: italic;
   font-weight: 400;
   font-size: 50px;
   line-height: 60px;
   color: var(--text);
-  margin: 0 auto;
 }
 .skills_icons {
-  display: inline-flex;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .skills_icon {
   margin-bottom: 25px;
   display: flex;
   align-items: center;
+  text-align: center;
   flex-direction: column;
+  padding: 0px 20px;
+  row-gap: 10px;
 }
 
 .skills_icon_img img {
@@ -482,10 +481,19 @@ h3 {
   margin: 0 auto;
 }
 .code {
-  max-width: 1445px;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 100px;
   background-color: var(--white-bg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.code_example {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.code_example h2 {
+  text-align: center;
 }
 
 footer {
@@ -511,19 +519,7 @@ h4 {
   margin: 0 auto;
   text-align: center;
 }
-.RS {
-  width: 100px;
-  position: relative;
-  margin: 0 auto;
-}
-.rss-year {
-  position: absolute;
-  font-family: "Castoro";
-  font-style: italic;
-  font-weight: 600;
-  font-size: 35px;
-  color: var(--text);
-}
+
 @media (max-width: 720px) and (min-width: 300px) {
   .header__nav {
     display: none;
@@ -533,8 +529,9 @@ h4 {
   }
 }
 @media (max-width: 660px) and (min-width: 300px) {
-  .main_name {
-    margin-top: 146px;
+  .main_main {
+    display: flex;
+    flex-direction: column;
   }
   .skills_icons {
     flex-direction: column;
