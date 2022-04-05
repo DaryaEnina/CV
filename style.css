@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap");
 
+@import "./assets/reset.css";
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -14,6 +16,8 @@ html {
   --white-bg: #ffffff;
   --border-bottom: 1px solid black;
   --text: #000000;
+  --border-img: #f2f2f2;
+  --fill: #000000;
 }
 
 :root[data-theme="dark"] {
@@ -21,6 +25,8 @@ html {
   --white-bg: #2c2c2c;
   --border-bottom: 2px solid #ffffff;
   --text: #ffffff;
+  --border-img: #ffffff;
+  --fill: #ffffff;
 }
 body {
   width: 100%;
@@ -30,6 +36,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: var(--text);
+  overflow: auto;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -39,18 +46,20 @@ header {
   width: 100%;
   margin: 0 auto;
   background-color: var(--main-bg);
+  position: sticky;
+  top: 0;
 }
 .header_wrapper {
   max-width: 940px;
   margin: 0 auto;
   border-bottom: var(--border-bottom);
+  padding-bottom: 20px;
 }
 .header_list {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  height: 90px;
-  padding: 0px;
+  padding: 20px 0;
 }
 .header_items {
   list-style-type: none;
@@ -180,7 +189,6 @@ header {
 .main_switch {
   display: flex;
   justify-content: flex-end;
-  padding-top: 35px;
   margin: 0 auto;
 }
 .main_checkbox {
@@ -216,47 +224,110 @@ header {
 .main_checkbox:checked:before {
   left: 30px;
 }
+.main_main {
+  display: flex;
+  justify-content: space-between;
+}
 .main_info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
   text-align: center;
+  padding: 30px;
 }
 .main_name {
-  max-width: 125px;
-  margin-bottom: 30px;
-}
-h1 {
   font-family: "Castoro";
   font-style: italic;
   font-weight: 400;
-  font-size: 88px;
-  line-height: 91px;
-  margin: 0px -65px;
+  font-size: 49px;
+  line-height: 80px;
 }
+
 .main_about {
-  max-width: 250px;
-}
-.main_about p {
+  font-family: "Castoro";
+  font-style: italic;
   font-size: 30px;
-  margin: 0;
 }
 
 .main_photo {
   max-width: 940px;
   height: 340px;
-  margin: 0 auto;
-}
-figcaption {
-  margin: 0 auto;
-  text-align: center;
+  margin: 0;
 }
 .main_photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 30% 70%;
+  border-radius: 50%;
+  border: 15px solid var(--border-img);
+}
+.contacts_wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts_title {
+  text-align: center;
+}
+.contacts_text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer_button {
+  margin: 0 auto;
+}
+.contacts_button {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #333333;
+  font-size: 18px;
+  color: #f7f7f7;
+  margin-bottom: 30px;
+}
+.contacts_icons {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  flex-direction: column;
+}
+.contacts_icon {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.contacts_image {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.discord {
+  background-image: url(./assets/img/discord.png);
+  background-size: cover;
+}
+.telegram {
+  background-image: url(./assets/img/telegram.svg);
+  background-size: cover;
+}
+.github {
+  background-image: url(./assets/img/github-icon.svg);
+  background-size: cover;
+}
+.phone {
+  background-image: url(./assets/img/phone.svg);
+  background-size: cover;
+}
+.home {
+  background-image: url(./assets/img/Home.svg);
+  background-size: cover;
+}
+.contacts_link {
+  text-decoration: none;
+  color: var(--text);
+}
+.contacts_link:hover {
+  color: blueviolet;
 }
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 /* Main styles end*/
@@ -410,48 +481,11 @@ h3 {
   width: 100%;
   margin: 0 auto;
 }
-.contacts {
+.code {
   max-width: 1445px;
   margin: 0 auto;
   padding-top: 100px;
   background-color: var(--white-bg);
-}
-.contacts_wrapper {
-  max-width: 340px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-.contacts_title {
-  text-align: center;
-}
-.contacts_text {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.footer_button {
-  margin: 0 auto;
-}
-.contacts_button {
-  width: 180px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: #333333;
-  font-size: 18px;
-  color: #f7f7f7;
-  margin-bottom: 30px;
-}
-.contacts_icons {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  padding-bottom: 50px;
-  list-style-type: none;
-  padding-inline-start: 0px;
-}
-.contacts_icon img {
-  width: 40px;
-  height: 40px;
 }
 
 footer {
